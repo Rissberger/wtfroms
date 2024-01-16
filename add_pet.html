@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a Pet</title>
+</head>
+<body>
+    <h1>Add a New Pet</h1>
+    <form method="POST" >
+        {{ form.hidden_tag() }}
+
+        {{ form.name.label }} {{ form.name }}
+        {% if form.name.errors %}
+            <div class="errors">{{ form.name.errors[0] }}</div>
+        {% endif %}
+        <br>
+
+        {{ form.species.label }} {{ form.species }}
+        {% if form.species.errors %}
+            <div class="errors">{{ form.species.errors[0] }}</div>
+        {% endif %}
+        <br>
+
+        {{ form.photo_url.label }} {{ form.photo_url }}
+        {% if form.photo_url.errors %}
+            <div class="errors">{{ form.photo_url.errors[0] }}</div>
+        {% endif %}
+        <br>
+
+        {{ form.age.label }} {{ form.age }}
+        {% if form.age.errors %}
+            <div class="errors">{{ form.age.errors[0] }}</div>
+        {% endif %}
+        <br>
+
+        {{ form.notes.label }} {{ form.notes }}
+        {% if form.notes.errors %}
+            <div class="errors">{{ form.notes.errors[0] }}</div>
+        {% endif %}
+        <br>
+
+        {{ form.submit }}
+    </form>
+</body>
+</html>
